@@ -1,4 +1,4 @@
-package ru.aston.collections_hometask;
+package ru.aston.collections_hometask.my_arraylist;
 
 import java.util.StringJoiner;
 

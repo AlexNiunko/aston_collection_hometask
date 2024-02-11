@@ -1,4 +1,6 @@
-package ru.aston.collections_hometask;
+package ru.aston.collections_hometask.my_arraylist;
+
+import ru.aston.collections_hometask.MyList;
 
 import java.util.*;
 
@@ -131,19 +133,44 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void bubbleSort(Comparator<T> comparator) {
-        boolean flag=false;
-        while (!flag){
-            flag=true;
+        boolean flag = false;
+        while (!flag) {
+            flag = true;
             for (int i = 1; i < this.size; i++) {
-                if (comparator.compare(this.storage[i],this.storage[i-1])<0){
-                    flag=false;
-                    T temp=this.storage[i-1];
-                    this.storage[i-1]=this.storage[i];
-                    this.storage[i]=temp;
+                if (comparator.compare(this.storage[i], this.storage[i - 1]) < 0) {
+                    flag = false;
+                    T temp = this.storage[i - 1];
+                    this.storage[i - 1] = this.storage[i];
+                    this.storage[i] = temp;
                 }
             }
         }
     }
+
+    static <T extends Comparable<T>> void sort(Collection<T> collection) throws MyListException {
+        MyArrayList<T>list=new MyArrayList<>(collection);
+        collection.clear();
+        list.bubbleSort(new Comparator<T>() {
+            @Override
+            public int compare(T o1, T o2) {
+                return o1.compareTo(o2);
+            }
+        });
+        for (int i = 0; i < list.size(); i++) {
+            collection.add(list.get(i));
+        }
+    }
+
+    static <T extends Comparable<T>> void sort(Collection<T> collection,Comparator<T>comparator) throws MyListException {
+        MyArrayList<T>list=new MyArrayList<>(collection);
+        collection.clear();
+        list.bubbleSort(comparator);
+        for (int i = 0; i < list.size(); i++) {
+            collection.add(list.get(i));
+        }
+    }
+
+
 
     private void insert(T[] array, T value, int size, int index) {
         int flag = size;

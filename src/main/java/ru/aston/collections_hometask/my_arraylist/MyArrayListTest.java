@@ -1,4 +1,6 @@
-package ru.aston.collections_hometask;
+package ru.aston.collections_hometask.my_arraylist;
+
+import ru.aston.collections_hometask.MyList;
 
 import java.util.*;
 
@@ -10,7 +12,7 @@ public class MyArrayListTest {
         for (int value:array) {
             collection.add(value);
         }
-        MyList<Integer>integerMyList=new MyArrayList<>(collection);
+        MyList<Integer> integerMyList=new MyArrayList<>(collection);
         System.out.printf("Here is our list %s , list size is %d  \n" ,integerMyList,integerMyList.size());
         System.out.printf("Removed element is %d , our list is %s, list size is %d  \n",integerMyList.remove(3),integerMyList,integerMyList.size());
         integerMyList.bubbleSort(new MyIntegerComparator());
@@ -52,9 +54,9 @@ public class MyArrayListTest {
         personMyArrayList.bubbleSort(new MyPersonAgeComparator());
         System.out.printf("This is persons sorted by age %s",personMyArrayList);
         personMyArrayList.bubbleSort(new MyPersonHeightComparator().thenComparing(new MyPersonAgeComparator()));
-        System.out.printf("This is persons sorted by height and then by age  %s",personMyArrayList);
-
-
+        System.out.printf("This is persons sorted by height and then by age  %s \n",personMyArrayList);
+        MyArrayList.sort(collection);
+        System.out.println(collection);
 
 
     }

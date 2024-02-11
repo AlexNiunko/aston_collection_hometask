@@ -1,5 +1,7 @@
 package ru.aston.collections_hometask;
 
+import ru.aston.collections_hometask.my_arraylist.MyListException;
+
 import java.util.Collection;
 import java.util.Comparator;
 
