@@ -1,4 +1,4 @@
-package ru.aston.collections_hometask.my_arraylist;
+package ru.aston.collections_hometask;
 
 import java.util.StringJoiner;
 
@@ -11,6 +11,18 @@ public class Person {
         this.name = name;
         this.age = age;
         this.height = height;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     @Override

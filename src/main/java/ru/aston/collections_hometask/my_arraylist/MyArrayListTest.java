@@ -2,6 +2,7 @@ package ru.aston.collections_hometask.my_arraylist;
 
 import ru.aston.collections_hometask.MyList;
 import ru.aston.collections_hometask.MyListException;
+import ru.aston.collections_hometask.Person;
 
 import java.util.*;
 
@@ -78,13 +79,13 @@ public class MyArrayListTest {
     private static class MyPersonAgeComparator implements Comparator<Person>{
         @Override
         public int compare(Person o1, Person o2) {
-            return o1.age-o2.age;
+            return o1.getAge()-o2.getAge();
         }
     }
     private static class MyPersonHeightComparator implements Comparator<Person>{
         @Override
         public int compare(Person o1, Person o2) {
-            return (int) (o1.height- o2.height);
+            return (int) (o1.getHeight()- o2.getHeight());
         }
     }
 

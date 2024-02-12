@@ -12,5 +12,5 @@ public interface MyList<T> {
     int size();
     boolean addAll(int index,Collection<? extends T> collection) throws MyListException;
     boolean addAll(Collection<? extends T> collection) throws MyListException;
-    void bubbleSort(Comparator<T>comparator);
+    void bubbleSort(Comparator<T>comparator) throws MyListException;
 }
