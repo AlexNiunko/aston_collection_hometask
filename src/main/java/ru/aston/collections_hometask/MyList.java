@@ -1,12 +1,10 @@
 package ru.aston.collections_hometask;
 
-import ru.aston.collections_hometask.my_arraylist.MyListException;
-
 import java.util.Collection;
 import java.util.Comparator;
 
 public interface MyList<T> {
-    boolean add(T t);
+    boolean add(T t) throws MyListException;
     boolean add(int index,T t) throws MyListException;
     T remove(int index) throws MyListException;
     boolean remove(T object);

@@ -1,4 +1,4 @@
-package ru.aston.collections_hometask.my_arraylist;
+package ru.aston.collections_hometask;
 
 public class MyListException extends Exception{
     public MyListException() {

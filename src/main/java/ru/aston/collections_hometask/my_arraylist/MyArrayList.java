@@ -1,6 +1,7 @@
 package ru.aston.collections_hometask.my_arraylist;
 
 import ru.aston.collections_hometask.MyList;
+import ru.aston.collections_hometask.MyListException;
 
 import java.util.*;
 
